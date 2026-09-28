@@ -25,13 +25,13 @@
 <body>
 
 <h1>개인정보처리방침</h1>
-<div class="meta">시행일: 2026-07-03 · 버전 1.0</div>
+<div class="meta">시행일: 2026-09-28 · 버전 1.1</div>
 
 <p>본 방침은 <strong>MetaBook</strong> Android 애플리케이션(이하 &ldquo;본 앱&rdquo;)에 적용됩니다. 본 앱은 사용자가 직접 준비한 소설·만화 콘텐츠를 읽기 위한 광고 없는 개인용 리더이며, 온디바이스 TTS(텍스트 음성 변환)를 내장합니다.</p>
 
 <h2>1. 수집하는 개인정보</h2>
 <p>본 앱의 개발자는 <strong>어떠한 개인정보도 수집하지 않습니다.</strong> 계정·로그인·회원가입이 없으며, 이름, 위치, 연락처, 하드웨어 기기 식별자, 광고 ID, 사용 통계, 분석(analytics) 데이터를 수집하거나 개발자 또는 제3자 서버로 전송하지 않습니다.</p>
-<p>본 앱은 최초 실행 시 <strong>무작위 UUID</strong>를 하나 생성해 기기 내부에 저장합니다. 이 값은 하드웨어 식별자(IMEI, Android ID 등)와 무관한 난수이며, 독서 위치를 기기별로 구분해 저장하는 키로만 사용됩니다. 이 UUID는 아래 2항의 &ldquo;사용자 본인이 지정한 서버&rdquo; 외에는 어디에도 전송되지 않습니다.</p>
+<p>본 앱은 독서 위치를 기기별로 구분해 저장하는 키로 Android 플랫폼이 앱마다 제공하는 <strong>기기 ID(Android ID)</strong>를 사용합니다. 이 값은 앱 서명 키·사용자·기기 조합마다 달라 다른 앱과 공유되지 않으며, 앱을 다시 설치해도 유지되어 같은 기기의 독서 기록을 이어 갈 수 있게 합니다(기기 초기화 시 변경). IMEI·전화번호·광고 ID 등 다른 식별자는 사용하지 않습니다. 이 기기 ID는 아래 2항의 &ldquo;사용자 본인이 지정한 서버&rdquo; 외에는 어디에도 전송되지 않으며, 개발자는 이를 수신하지 않습니다. (버전 1.0까지는 무작위 UUID를 사용했습니다.)</p>
 
 <h2>2. 네트워크 통신 (사용자 지정 서버)</h2>
 <p>본 앱에는 <strong>기본 서버가 없습니다.</strong> 네트워크 통신은 사용자가 설정 화면에 직접 입력한 <strong>사용자 본인 소유의 서버 주소</strong>에 대해서만 일어나며, 서버를 입력하지 않으면 본 앱은 완전히 오프라인으로 동작합니다(기기 내 로컬 책 폴더 읽기).</p>
@@ -39,7 +39,7 @@
 <ul>
   <li>책·만화 콘텐츠 다운로드 (챕터 텍스트, 만화 이미지, 목차)</li>
   <li>독서 진행 상태 (책 ID·제목, 마지막 챕터/페이지, TTS 문단 위치, 저장 시각)</li>
-  <li>리더 설정값 (글꼴 크기, TTS 속도 등)과 1항의 기기 UUID (기기별 저장 구분용)</li>
+  <li>리더 설정값 (글꼴 크기, TTS 속도 등)과 1항의 기기 ID (Android ID, 기기별 저장 구분용)</li>
 </ul>
 <p>이 전송은 사용자가 스스로 지정한 목적지(사용자 소유 서버)로의 전송이며, 개발자는 이 데이터에 접근할 수 없고 수신하지도 않습니다.</p>
 
@@ -80,13 +80,13 @@
 <hr class="lang-divider">
 
 <h1>Privacy Policy (English)</h1>
-<div class="meta">Effective: 2026-07-03 · Version 1.0</div>
+<div class="meta">Effective: 2026-09-28 · Version 1.1</div>
 
 <p>This policy applies to the <strong>MetaBook</strong> Android application ("the App"), an ad-free personal reader for novels and comics you provide yourself, with built-in on-device text-to-speech.</p>
 
 <h3>1. Personal Information We Collect</h3>
 <p>The developer <strong>collects no personal information.</strong> There is no account, login, or sign-up. We do not collect or transmit your name, location, contacts, hardware device identifiers, advertising IDs, usage statistics, or analytics data to the developer or any third party.</p>
-<p>On first launch the App generates one <strong>random UUID</strong> stored on your device. It is a random number unrelated to hardware identifiers (IMEI, Android ID, etc.) and is used only as a key to keep per-device reading positions apart. It is sent nowhere except the user-configured server described in section 2.</p>
+<p>To keep reading positions apart per device, the App uses the <strong>device ID that Android provides to each app (Android ID)</strong>. It differs for every combination of app signing key, user and device, so it is not shared with other apps, and it stays the same across reinstalls so the same device can pick up its reading history (it changes on a factory reset). No other identifier (IMEI, phone number, advertising ID) is used. This device ID is sent nowhere except the user-configured server described in section 2, and the developer does not receive it. (Up to version 1.0 a random UUID was used instead.)</p>
 
 <h3>2. Network Communication (Your Own Server)</h3>
 <p>The App has <strong>no default server.</strong> Network communication happens only with a <strong>server address you enter yourself</strong> in Settings; with no server configured, the App works fully offline (reading books from the on-device local folder).</p>
@@ -94,7 +94,7 @@
 <ul>
   <li>Book/comic content downloads (chapter text, comic images, chapter lists)</li>
   <li>Reading progress (book id/title, last chapter/page, TTS paragraph position, timestamps)</li>
-  <li>Reader settings (font size, TTS speed, etc.) and the device UUID from section 1 (to keep per-device saves apart)</li>
+  <li>Reader settings (font size, TTS speed, etc.) and the device ID (Android ID) from section 1 (to keep per-device saves apart)</li>
 </ul>
 <p>This is a transfer you initiate to a destination you own and control. The developer cannot access and does not receive this data.</p>
 
