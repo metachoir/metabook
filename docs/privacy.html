@@ -25,7 +25,7 @@
 <body>
 
 <h1>개인정보처리방침</h1>
-<div class="meta">시행일: 2026-09-28 · 버전 1.1</div>
+<div class="meta">시행일: 2026-10-19 · 버전 1.2</div>
 
 <p>본 방침은 <strong>MetaBook</strong> Android 애플리케이션(이하 &ldquo;본 앱&rdquo;)에 적용됩니다. 본 앱은 사용자가 직접 준비한 소설·만화 콘텐츠를 읽기 위한 광고 없는 개인용 리더이며, 온디바이스 TTS(텍스트 음성 변환)를 내장합니다.</p>
 
@@ -56,6 +56,8 @@
   <li><strong>WAKE_LOCK</strong> - 화면이 꺼진 상태에서도 TTS 재생 유지</li>
   <li><strong>FOREGROUND_SERVICE / FOREGROUND_SERVICE_MEDIA_PLAYBACK</strong> - 백그라운드 TTS 재생 및 미디어 알림</li>
   <li><strong>POST_NOTIFICATIONS</strong> - TTS 재생 컨트롤 알림 표시</li>
+  <li><strong>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</strong> - 화면이 꺼진 긴 TTS 재생이 배터리 최적화로 중단되지 않도록 예외 요청 (첫 TTS 재생 시 1회 안내, 거절 가능)</li>
+  <li><strong>WRITE_SETTINGS</strong> (시스템 설정 변경) - 리더 밝기 슬라이더로 기기 화면 밝기(밝기 값·자동 밝기)를 조절. 사용자가 시스템 설정 화면에서 직접 허용해야 하며, 허용하지 않으면 밝기는 이 앱 화면에만 적용됩니다. 밝기 외의 시스템 설정은 변경하지 않습니다.</li>
 </ul>
 <p>본 앱은 위치, 연락처, 카메라, 마이크, 공용 저장소 등 어떠한 민감 권한도 요청하지 않습니다.</p>
 
@@ -80,7 +82,7 @@
 <hr class="lang-divider">
 
 <h1>Privacy Policy (English)</h1>
-<div class="meta">Effective: 2026-09-28 · Version 1.1</div>
+<div class="meta">Effective: 2026-10-19 · Version 1.2</div>
 
 <p>This policy applies to the <strong>MetaBook</strong> Android application ("the App"), an ad-free personal reader for novels and comics you provide yourself, with built-in on-device text-to-speech.</p>
 
@@ -110,6 +112,8 @@
   <li><strong>WAKE_LOCK</strong> - keep TTS playback alive while the screen is off</li>
   <li><strong>FOREGROUND_SERVICE / FOREGROUND_SERVICE_MEDIA_PLAYBACK</strong> - background TTS playback and the media notification</li>
   <li><strong>POST_NOTIFICATIONS</strong> - show the TTS playback-control notification</li>
+  <li><strong>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</strong> - ask for a battery-optimization exemption so long screen-off TTS playback is not stopped (asked once on first TTS playback; may be declined)</li>
+  <li><strong>WRITE_SETTINGS</strong> (Modify system settings) - let the reader brightness slider set the device screen brightness (level and adaptive mode). You must allow it yourself on the system settings page; without it brightness applies to the App&#39;s own screen only. No system setting other than brightness is changed.</li>
 </ul>
 <p>The App requests no location, contacts, camera, microphone, or shared-storage permissions.</p>
 
